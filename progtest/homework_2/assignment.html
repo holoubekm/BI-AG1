@@ -1,0 +1,388 @@
+<!--?xml version="1.0" encoding="utf-8" ?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+<html><head>
+  <title>holoumar@progtest.fit.cvut.cz - ProgTest</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="assignment_files/css.css" rel="stylesheet" type="text/css">
+  <script src="assignment_files/shared.js" language="JavaScript" type="text/javascript"></script>
+  
+ </head>
+ <body text="#000000" bgcolor="#828273">
+  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+   <tbody><tr height="25">
+    <td bgcolor="#00ff00" align="left"><span class="navLink"><a class="navLink" href="https://progtest.fit.cvut.cz/index.php?X=Main">ProgTest</a>&nbsp;&nbsp;►&nbsp;&nbsp;<a class="navLink" href="https://progtest.fit.cvut.cz/index.php?X=Course&amp;Cou=123">BI-AG1 (14/15 ZS)</a>&nbsp;&nbsp;►&nbsp;&nbsp;<a class="navLink" href="https://progtest.fit.cvut.cz/index.php?X=TaskGrp&amp;Cou=123&amp;Tgr=786">Úloha 2</a>&nbsp;&nbsp;►&nbsp;&nbsp;<b>Матрёшка</b></span></td>
+    <td bgcolor="#00ff00" align="right"><a class="navLink" href="https://progtest.fit.cvut.cz/index.php?X=Logout">Logout</a></td>
+   </tr>
+  </tbody></table>
+<br>
+
+
+
+
+ <br>
+ <br>
+   <center>
+   <div class="topLayout">
+    <div class="outBox">
+     <table class="header" width="100%" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+       <td class="header"><b>Матрёшка</b></td>
+      </tr>
+     </tbody></table>
+    </div>
+   </div>
+  </center>
+ <form name="form1" method="post" action="?X=TaskU&amp;Cou=123&amp;Tgr=786&amp;Tsk=1100" enctype="multipart/form-data">
+  <center>
+    <div class="topLayout">
+     <div class="outBox">
+      <table id="maintable" width="100%" cellspacing="0" cellpadding="2" border="0">
+       <colgroup><col width="200">
+       <col>
+       <col width="130">
+
+       </colgroup><tbody><tr>
+        <td class="ltCell" align="left"><b>Termín odevzdání:</b></td>
+        <td class="tCell" align="left"><b>16.11.2014 23:59:59</b></td>
+        <td class="rtCell" id="countdown" align="right">&nbsp;</td>
+       </tr>
+
+       <tr>
+        <td class="lCell" align="left"><b>Hodnocení:</b></td>
+        <td class="rCell" colspan="2" align="left"><b>8.7500</b></td>
+       </tr>
+       <tr>
+        <td class="lCell" align="left"><b>Max. hodnocení:</b></td>
+        <td class="rCell" colspan="2" align="left"><b>7.0000</b> (bez bonusů)</td>
+       </tr>
+       <tr>
+        <td class="lCell" align="left"><b>Odevzdaná řešení:</b></td>
+        <td class="rCell" colspan="2" align="left">1</td>
+       </tr>
+
+       <tr>
+        <td class="lbCell" align="left"><b>Nápovědy:</b></td>
+        <td class="rbCell" colspan="2" align="left">0 / 0</td>
+       </tr>
+
+       <tr>
+        <td class="lrtbCell" colspan="3" align="left"><p>Děti ve školce si oblíbily skládání matrjošek, aniž by si uvědomily, jakou
+mají matrjošky vlastně krásnou rekurzivní definici:</p>
+<ol>
+ <li>Prázdná posloupnost je matrjoška.</li>
+ <li>Matrjoška je schránka o jisté velikosti V, sestávající z levé a pravé poloviny (obě velikosti V),
+   která obsahuje posloupnost dalších matrjošek, součet jejichž velikostí je
+   nejvýše V. Velikost matrjošky je daná pouze velikostí obalu, nezávisle na tom,
+   co všechno je uvnitř.</li>
+</ol>
+
+<p>Děti do řady položily kousky matrjošek, levé a pravé, a od vás chtějí poradit,
+jestli tato řada lze poskládat do korektní matrjošky. Složit do sebe lze pouze
+dílky stejné velikosti. Pořadí dílků v této řadě však nelze měnit.
+Zároveň je potřeba zjistit, které z dětí výslednou matrjošku dostane, což bude takové,
+které přispělo nejvíce. To znamená součet velikostí dílků, které toto dítě celkem
+položilo (v případě rovnosti rozhoduje lexikografické pořadí jmen dle ASCII).
+Výslednou složeninu toto dítě dostane i tehdy, pokud z ní nelze poskládat korektní matrjošku.</p>
+
+<p>Formát vstupu:</p>
+<ul>
+ <li>na prvním řádku je číslo <tt>N</tt> udávající počet kousků matrjošek,</li>
+ <li>pak následuje <tt>N</tt> řádků, na <tt>i</tt>-tém řádku je číslo <tt>M<sub>i</sub></tt> 
+     popisující část matrjošky, mezera, a potom jméno dítěte <tt>J<sub>i</sub></tt>, které tam tento díl položilo,</li>
+ <li>pokud je číslo <tt>M<sub>i</sub></tt> záporné, je to levá část matrjošky, pokud kladné, tak pravá,</li>
+ <li>absolutní hodnota <tt>M<sub>i</sub></tt> udává velikost daného dílku matrjošky,</li>
+ <li><tt>1 ≤ N ≤ 1000000</tt>,</li>
+ <li><tt>-2<sup>20</sup>&lt; M<sub>i</sub> &lt; 2<sup>20</sup>, M<sub>i</sub> ≠ 0</tt>,</li>
+ <li><tt>|J<sub>i</sub>| &lt; 1024</tt> a sestává z tisknutelných znaků,</li>
+ <li>můžete se spolehnout, že vstup je zadán korektně.</li>
+</ul>
+
+<p>Formát výstupu:</p>
+<ul>
+ <li>první řádek obsahuje buďto "Ano" nebo "Ne" (bez uvozovek) podle toho, zda je
+   řada složitelná do matrjošky či není,</li>
+ <li>druhý řádek obsahuje jméno dítěte, které matrjošku dostane.</li>
+</ul>
+
+<p>V mateřské školce platí přísná hygienická nařízení, která bohužel knihovna STL
+nesplňuje, takže ji ve svých programech nemůžete používat.</p>
+
+
+Příklad vstupu:
+<pre>6
+-10 Pepa
+-3 Kuba
+3 Kuba'); DROP TABLE Kids;
+-8 Roman
+8 Kuba
+10 Roman
+</pre>
+Příklad výstupu:
+<pre>Ne
+Roman
+</pre>
+<hr>
+
+Příklad vstupu:
+<pre>6
+-6 l33t h4x0r
+-4 l33t h4x0r
+4 l33t h4x0r
+-2 script kiddie
+2 script kiddie
+6 script kiddie
+</pre>
+
+Příklad výstupu:
+<pre>Ano
+l33t h4x0r
+</pre>
+</td>
+       </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+      </tbody></table>
+     </div>
+    </div>
+
+
+ <br>
+ <div class="topLayout">
+  <div class="outBox">
+   <table id="reftable" width="100%" cellspacing="0" cellpadding="2" border="0">
+   <tbody><tr>
+    <td class="ltbSepCell" align="left"><input name="SHOW_REF" onchange="showRefSolution()" type="checkbox">&nbsp;<b>Referenční řešení</b></td>
+    <td class="rtbSepCell" align="right">&nbsp;</td>
+   </tr>
+   <tr style="display: none;">
+    <td class="lrtbCell" colspan="2" align="left"><ul><li><b>Hodnotitel: automat</b><ul><li>Program zkompilován</li><li>Test 'Test kratkymi daty': Úspěch<ul><li>Dosaženo: 100.00 %, požadováno: 100.00 %</li><li>Max doba běhu: 0.006 s (limit: 2.000 s)</li><li>Celková doba běhu: 0.028 s</li><li>Úspěch v závazném testu, hodnocení: 100.00 %</li></ul></li>
+<li>Test 'Test delšími daty': Úspěch<ul><li>Dosaženo: 100.00 %, požadováno: 100.00 %</li><li>Max doba běhu: 0.667 s (limit: 6.000 s)</li><li>Celková doba běhu: 1.020 s</li><li>Úspěch v závazném testu, hodnocení: 100.00 %</li></ul></li>
+<li>Test 'Test ještě delšími daty': Úspěch<ul><li>Dosaženo: 100.00 %, požadováno: 100.00 %</li><li>Max doba běhu: 0.399 s (limit: 4.000 s)</li><li>Celková doba běhu: 0.454 s</li><li>Úspěch v závazném testu, hodnocení: 100.00 %</li></ul></li>
+<li>Celkové hodnocení: 100.00 % (= 1.00 * 1.00 * 1.00)</li></ul></li><li>Celkové procentní hodnocení: 100.00 %</li><li>Bonus za včasné odevzdání: 1.75</li><li>Celkem bodů: 1.00 * ( 7.00 + 1.75 ) = 8.75</li></ul></td>
+   </tr>
+    <tr style="display: none;">
+  <td class="ltbCell" align="left"><b>SW metriky:</b></td>
+  <td class="rtbCell" colspan="2" align="left">
+   <table cellpadding="2" border="0">
+    <tbody><tr>
+     <td>&nbsp;</td>
+     <td class="ac">Celkem</td>
+     <td class="ac">Průměr</td>
+     <td class="ac">Maximum</td>
+     <td>Jméno funkce</td>
+    </tr>
+    <tr>
+     <td>Funkce:</td>
+     <td class="ar"><b>4</b></td>
+     <td class="ar">--</td>
+     <td class="ar">--</td>
+     <td>--</td>
+    </tr>
+    <tr>
+     <td>Řádek kódu:</td>
+     <td class="ar"><b>90</b></td>
+     <td class="ar"><span class="textOk">22.50 ± 10.92</span></td>
+     <td class="ar"><span class="textOk">40</span></td>
+     <td><tt>main(int,char **)</tt></td>
+    </tr>
+    <tr>
+     <td>Cyklomatická složitost:</td>
+     <td class="ar"><b>29</b></td>
+     <td class="ar"><span class="textOk">7.25 ± 4.32</span></td>
+     <td class="ar"><span class="textOk">14</span></td>
+     <td><tt>main(int,char **)</tt></td>
+    </tr>
+   </tbody></table>
+  </td>
+ </tr>
+   </tbody></table>
+  </div>
+ </div>
+
+
+
+
+ <br>
+ <div class="topLayout">
+  <div class="outBox">
+   <table id="maintable" width="100%" cellspacing="0" cellpadding="2" border="0">
+    <colgroup><col width="200">
+    <col>
+    <col width="130">
+
+   </colgroup><tbody><tr>
+    <td class="ltbOkSepCell" align="left"><b>14</b></td>
+    <td class="tbOkSepCell" align="left"><b>02.11.2014 14:09:46</b></td>
+    <td class="rtbOkSepCell" align="center"><div class="but1 w120"><div class="but2"><a class="butLink" href="https://progtest.fit.cvut.cz/index.php?X=TaskD&amp;Cou=123&amp;Tgr=786&amp;Tsk=1100&amp;Sub=487374">Download</a></div></div></td>
+   </tr>
+   <tr>
+    <td class="ltCell" align="left"><b>Stav odevzdání:</b></td>
+    <td class="tCell" align="left">Ohodnoceno</td>
+
+
+
+    <td class="rtbCell" rowspan="2">&nbsp;</td>
+
+
+   </tr>
+
+   <tr>
+    <td class="lbCell" align="left"><b>Hodnocení:</b></td>
+    <td class="bCell" align="left">8.7500</td>
+   </tr>   <tr>
+    <td class="lrtbCell" colspan="3" align="left"><ul><li><b>Hodnotitel: automat</b><ul><li>Program zkompilován</li><li>Test 'Test kratkymi daty': Úspěch<ul><li>Dosaženo: 100.00 %, požadováno: 100.00 %</li><li>Max doba běhu: 0.006 s (limit: 2.000 s)</li><li>Celková doba běhu: 0.029 s</li><li>Úspěch v závazném testu, hodnocení: 100.00 %</li></ul></li>
+<li>Test 'Test delšími daty': Úspěch<ul><li>Dosaženo: 100.00 %, požadováno: 100.00 %</li><li>Max doba běhu: 3.583 s (limit: 6.000 s)</li><li>Celková doba běhu: 4.622 s</li><li>Úspěch v závazném testu, hodnocení: 100.00 %</li></ul></li>
+<li>Test 'Test ještě delšími daty': Úspěch<ul><li>Dosaženo: 100.00 %, požadováno: 100.00 %</li><li>Max doba běhu: 1.768 s (limit: 4.000 s)</li><li>Celková doba běhu: 1.946 s</li><li>Úspěch v závazném testu, hodnocení: 100.00 %</li></ul></li>
+<li>Celkové hodnocení: 100.00 % (= 1.00 * 1.00 * 1.00)</li></ul></li><li>Celkové procentní hodnocení: 100.00 %</li><li>Bonus za včasné odevzdání: 1.75</li><li>Celkem bodů: 1.00 * ( 7.00 + 1.75 ) = 8.75</li></ul></td>
+   </tr> <tr>
+  <td class="ltbCell" align="left"><b>SW metriky:</b></td>
+  <td class="rtbCell" colspan="2" align="left">
+   <table cellpadding="2" border="0">
+    <tbody><tr>
+     <td>&nbsp;</td>
+     <td class="ac">Celkem</td>
+     <td class="ac">Průměr</td>
+     <td class="ac">Maximum</td>
+     <td>Jméno funkce</td>
+    </tr>
+    <tr>
+     <td>Funkce:</td>
+     <td class="ar"><b>15</b></td>
+     <td class="ar">--</td>
+     <td class="ar">--</td>
+     <td>--</td>
+    </tr>
+    <tr>
+     <td>Řádek kódu:</td>
+     <td class="ar"><b>254</b></td>
+     <td class="ar"><span class="textOk">16.93 ± 17.68</span></td>
+     <td class="ar"><span class="textWarn">73</span></td>
+     <td><tt>checkPossibility(mymap &amp;)</tt></td>
+    </tr>
+    <tr>
+     <td>Cyklomatická složitost:</td>
+     <td class="ar"><b>55</b></td>
+     <td class="ar"><span class="textOk">3.67 ± 5.15</span></td>
+     <td class="ar"><span class="textOk">19</span></td>
+     <td><tt>checkPossibility(mymap &amp;)</tt></td>
+    </tr>
+   </tbody></table>
+  </td>
+ </tr>   </tbody></table>
+  </div>
+ </div> <br>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  </center>
+ </form>
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+<!--
+
+var deadLine = new Date ( 1416178799 * 1000 );
+
+function CBpressed ( num )
+ {
+   var pre, cb;
+
+   cb = MM_findObj ( "cb_" + num );
+   pre = MM_findObj ( "pre_" + num );
+   if ( cb != null && pre != null )
+    {
+      pre . style . display = cb . checked ? "block" : "none";
+    }
+ }
+
+function unlockAdvice ( url )
+ {
+   if ( confirm ( 'Máte k dispozici pouze omezený počet nápověd. Navíc, použití nápovědy může snížit bodové hodnocení. Opravdu chcete zpřístupnit tuto nápovědu?' ) )
+    this . location = url;
+ }
+
+function setCountdown ( )
+ {
+   var d = new Date ();
+   var x = ( deadLine . getTime () - d . getTime () );
+   var tgt = document . getElementById ( "countdown" );
+
+   if ( x > 0 )
+    {
+      var s = Math . floor ( x / 1000 );
+      var ms = (x % 1000) + "";
+
+      while ( ms . length  < 3 ) ms = "0" + ms;
+
+      tgt . innerHTML = s + "." + ms + " sec";
+
+      window . setTimeout ( setCountdown, 117 );
+    }
+   else
+    {
+      tgt . innerHTML = '&nbsp;';
+    }
+ }
+
+function showRefSolution ( )
+ {
+   var t = document . getElementById ( "reftable" );
+   var x = document . getElementsByName ( "SHOW_REF" )[0];
+
+   if ( ! x ) return;
+   var r1 = t . rows[1], r2 = t . rows[2];
+
+   if ( x . checked )
+    {
+      r1 . style . display = "";
+      if ( r2 ) r2 . style . display = "";
+    }
+   else
+    {
+      r1 . style . display = "none";
+      if ( r2 ) r2 . style . display = "none";
+    }
+ }
+
+
+setCountdown ();
+showRefSolution ();
+
+// -->
+</script>
+
+
+
+
+
+ 
+
+
+</body></html>
+<!-- Template run time: 0.098389863967896 sec -->

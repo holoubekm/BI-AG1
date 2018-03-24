@@ -1,5 +1,6 @@
 # BI-AG1 / BI-EFA Course
-## CTU / ČVUT FIT
+## Algoritmy a grafy 1 / Efektivní algoritmy
+### CTU / ČVUT FIT
 
 ### Progtest
 Folder contains solutions and source codes for assignments we were assigned to during the winter semester.
